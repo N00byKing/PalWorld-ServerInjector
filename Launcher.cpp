@@ -3,7 +3,7 @@
 #include <windows.h>
 
 std::string ue4ss_dll_name = "UE4SS.dll";
-std::string palserver_exe_name = "PalServer-Win64-Test-Cmd.exe";
+std::string palserver_exe_name = "PalServer-Win64-Shipping-Cmd.exe";
 
 int wmain(int argc, wchar_t *argv[ ]) {
     std::string arguments;
