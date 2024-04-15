@@ -16,6 +16,8 @@ int wmain(int argc, wchar_t *argv[ ]) {
     std::string commandLine = palserver_exe_name + arguments;
     printf("Starting as: %s\n", commandLine.c_str());
 
+    HANDLE handle = nullptr;
+
 
     // Start PalServer .exe
     STARTUPINFOA si = {.cb = sizeof si};
@@ -43,7 +45,7 @@ int wmain(int argc, wchar_t *argv[ ]) {
         goto free_and_cleanup;
     }
 
-    HANDLE handle = CreateRemoteThread(pi.hProcess, NULL, 0, (LPTHREAD_START_ROUTINE)LoadLibraryA, alloc, 0, NULL);
+    handle = CreateRemoteThread(pi.hProcess, NULL, 0, (LPTHREAD_START_ROUTINE)LoadLibraryA, alloc, 0, NULL);
     if (!handle) {
         printf("CreateRemoteThread failed.\n");
         goto free_and_cleanup;
