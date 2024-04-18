@@ -1,3 +1,8 @@
+# Project is archived
+
+This launcher should no longer be necessary, as UE4SS now uses dwmapi.dll to inject.
+If a mod you use still wants you to copy a xinput dll, its probably outdated.
+
 # PalWorld UE4SS Server Injector
 
 Launcher for PalWorld Server that injects UE4SS.dll into the server process.
